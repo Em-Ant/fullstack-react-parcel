@@ -1,0 +1,30 @@
+{
+  "name": "react-parcel",
+  "version": "1.0.0",
+  "description": "parcel test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'no tests yet'",
+    "start": "node ./server"
+  },
+  "keywords": [
+    "parcel",
+    "react",
+    "babel"
+  ],
+  "author": "emant",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "parcel-bundler": "^1.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "node-sass": "^4.8.3"
+  }
+}
