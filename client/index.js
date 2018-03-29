@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import App from './src/App'
+import App from './src/App';
 
-ReactDOM.render( <App/> , document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // Hot Module Replacement
 if (module.hot) {

@@ -1,22 +1,23 @@
-import React, {Component} from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       title: 'Loading...'
-    }
+    };
   }
-  componentDidMount() {
-    fetch('/api/hello')
-      .then(res => {
-        if (!res.ok) throw Error(res.statusText)
-        return res.json()
-      })
-      .then(({greeting}) => this.setState({title: greeting}))
-      .catch(e => this.setState({title: e.message}))
+  async componentDidMount() {
+    try {
+      const res = await fetch('/api/hello');
+      if (!res.ok) throw Error(res.statusText);
+      const { greeting } = await res.json();
+      this.setState({ title: greeting });
+    } catch (e) {
+      this.setState({ title: e.message });
+    }
   }
   render() {
     return (
@@ -26,8 +27,8 @@ class App extends Component {
           <h2>{this.state.title}</h2>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
